@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>For Loop Algorithms</title>
+</head>
+
+<body>
+  <h1>5.9 For Loop Algorithms</h1>
+  <section>
+    <h2>Problem #1</h2>
+    <p>Prompt the user to enter two numbers. Then use a for loop to calculate the sum of all the numbers from the first number to the second</p>
+    <button onclick="problem1()">Problem 1</button>
+    <p id="output1"></p>
+  </section>
+
+  <section>
+    <h2>Problem #2</h2>
+    <p>Use a for loop to prompt the user for three numbers and then display the average</p>
+    <button onclick="problem2()">Problem 2</button>
+    <p id="output2"></p>
+  </section>
+
+  <section>
+    <h2>Problem #3</h2>
+    <p>Use a for loop to calculate the factorial of a number. 5! = 1 * 2 * 3 * 4 * 5</p>
+    <button onclick="problem3()">Problem 3</button>
+    <p id="output3"></p>
+  </section>
+
+  <section>
+    <h2>Problem #4</h2>
+    <p>Use for loops to print every combination of two 6-sided dice.</p>
+    <button onclick="problem4()">Problem 4</button>
+    <p id="output4"></p>
+  </section>
+</body>
+
+<script>
+  function problem1() {
+    // Prompt user and store numbers in variables
+    var num1 = parseInt(prompt("Enter a number"));
+    var num2 = parseInt(prompt("Enter another number"));
+    // Create a variable to hold the sum
+    var sum = 0;
+    // Get the p element to print the out put
+    var p = document.getElementById("output1");
+    p.innerHTML ="";
+    // Add all the numbers together starting at the first except the last
+    for (var i = num1; i < num2; i++) {
+      // Add the current number to the sum
+      sum += i;
+      // Update the output with the number and a + for display
+      p.innerHTML += i + " + ";
+    }
+
+    // Add the last number
+    sum += num2;
+    // Add the last number and the result to display
+    p.innerHTML += num2 + " = " + sum;
+  }
+
+  function problem2() {
+    var sum = 0;
+    var p = document.getElementById("output2");
+    for (var i = 0; i < 3; i++){
+      var num = parseInt(prompt("Enter a number"));
+      sum += num;
+    }
+    var avg = sum / 3;
+    p.innerHTML = "The average is " + avg;
+  }
+
+  function problem3() {
+    var num = parseInt(prompt("Enter a number"));
+    var p = document.getElementById("output3");
+    var result = 1;
+    for (var i = 1; i <= num; i++){
+      result *= i;
+    }
+
+    p.innerHTML = num + "! = " + result;
+  }
+
+  function problem4() {
+    var p = document.getElementById("output4");
+    p.innerHTML = "";
+    for (var i = 1; i <= 6; i++){
+      for (var j = 1; j <= 6; j++){
+        p.innerHTML += i + ", " + j + "<br>";
+      }
+    }
+  }
+</script>
+
+</html>

@@ -1,0 +1,37 @@
+section {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: lightgray;
+  border-radius: 8px;
+}
+
+pre {
+  background-color: rgb(36, 36, 36);
+  color: white;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  border-bottom: 2px solid blue;
+}
+
+section a {
+  display: block;
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+}
+
+section a:hover {
+  background-color: aqua;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+}

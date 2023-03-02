@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>5.8 For Loops</title>
+</head>
+
+<body>
+  <h1>5.8 For Loops</h1>
+
+  <section>
+    <h2>Notes</h2>
+    <h3>For Loops</h3>
+    <p>For loops are used to repeat instructions a specific number of times.<br>
+      <br>
+      <u>Syntax</u>
+      <code>
+        <pre>
+for (var i = 0; i &lt; max; i++){
+  // Code to repeat
+}
+        </pre>
+      </code>
+      <code>var i = 0;</code> creates a counter variable <code>i</code> and starts it at zero
+      <code>i &lt; max;</code> is the condition. The loop will repeat until this condition is false.
+      <code>i++</code> increments the counter by 1
+    </p>
+  </section>
+
+  <section>
+
+    <h2>Exercises</h2>
+    <p>
+      Use a for loop to print out the values 0 to 9 to the console
+      Use console.log() to print, open browser inspection tool to see the output
+      Then, put the code inside a function definition named example1() and test it
+      Use a for loop to print the values 1 to 10
+      Use a for loop to print the values 0 to 100 counting by 10s
+    </p>
+    <a href="#" onclick="example1()">Example 1</a>
+    <a href="#" onclick="sum()">Sum</a>
+    <p id="output"></p>
+  </section>
+</body>
+<script>
+  function example1() {
+    var output = document.getElementById("output");
+    for (var i = 0; i < 10; i++) {
+      output.innerHTML += i + "<br>";
+    }
+  }
+
+  function sum() {
+    var num1 = parseInt(prompt("Enter a number"));
+    var num2 = parseInt(prompt("Enter another number"));
+    var sum = 0;
+    var p = document.getElementById("output");
+    for (var i = num1; i < num2; i++) {
+      sum += i;
+      p.innerHTML += i + " + ";
+    }
+    sum += num2;
+    p.innerHTML += num2 + " = " + sum;
+
+  }
+</script>
+
+</html>
