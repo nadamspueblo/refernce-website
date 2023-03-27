@@ -18,7 +18,7 @@ console.log("Example 3 output below");
 
 // Example 4: Find the sum of all the (numerical) elements in an array
 console.log("Example 4 output below");
-var nums = [4, 8, 21, 56, 27, 420];
+var nums = [-430, -8, -21, -56, -27, -420];
 var sum = 0;
 for (var i = 0; i < nums.length; i++){
   sum += nums[i];
@@ -27,11 +27,14 @@ console.log("Sum = " + sum);
 
 // Example 5: Find the max (numerical) value in an array
 console.log("Example 5 output below");
-var max; 
+var max = nums[0]; 
 for (var i = 0; i < nums.length; i++){
   var current = nums[i];
-  
+  if (current > max){
+    max = current;
+  }
 }
+console.log("max = " + max);
 
 
 // Start function for problem #1
